@@ -1,0 +1,187 @@
+/* ---- Normalize CSS ---- */
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    height: 100%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    font-style: inherit;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+html,
+body {
+    width: 100%;
+}
+
+/* ---- Main Code ---- */
+body {
+    font-family: "Karla", sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    font-style: normal;
+    color: #fff;
+    background-color: #e5eff5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 4em 2em;
+    min-height: 100%;
+}
+
+main {
+    margin-bottom: 2em;
+}
+
+/* ---- Block "Card" ---- */
+.card {
+    border-radius: 8px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+    display: grid;
+    grid-template: min-content 1fr / 1fr 1fr;
+    max-width: 664px;
+    overflow: hidden;
+}
+
+/* ---- General style for headings <h3> ---- */
+.title {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+/* ---- Color modifier for one heading <h3> ---- */
+.title--color-yellow {
+    color: #c0df34;
+}
+
+/* ---- First section "Join our community" ---- */
+.community {
+    grid-area: 1 / 1 / 2 / 3;
+    background-color: #fff;
+}
+.community__main-title {
+    font-size: 2.6rem;
+    font-weight: 700;
+    color: #2ab2af;
+    margin-bottom: 0.9em;
+}
+.community__sub-title {
+    margin-bottom: 0.8em;
+}
+.community__text {
+    line-height: 1.6;
+    color: #98a6bd;
+}
+
+/* ---- Second section "Monthly subcription" ---- */
+.subscription {
+    background-color: #2ab2af;
+}
+.subscription__price {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5em;
+}
+.subscription__value {
+    font-size: 3.2rem;
+    font-weight: 700;
+    margin-right: 0.36em;
+}
+.subscription__period {
+    opacity: 0.6;
+}
+.subscription__text {
+    opacity: 0.9;
+    margin-bottom: 2em;
+}
+.subscription__button {
+    width: 96%;
+    color: inherit;
+    background-color: #c0df34;
+    border-radius: 5px;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
+    padding: 1em;
+    transition: background-color 100ms;
+}
+.subscription__button:hover {
+    cursor: pointer;
+    background-color: #acc92f;
+}
+
+/* ---- Third section "Why us" ---- */
+.why-us {
+    background-color: #2dc0be;
+}
+.why-us__list {
+    font-size: 1.5rem;
+    line-height: 1.4;
+    list-style: none;
+    opacity: 0.8;
+}
+
+/* ---- Apply styles to multiple blocks/elements at once ---- */
+.community,
+.subscription,
+.why-us {
+    padding: 2.6em;
+}
+
+.subscription__title,
+.why-us__title {
+    margin-bottom: 1em;
+}
+
+/* ---- Footer ---- */
+.attribution {
+    font-size: 1.1rem;
+    color: #000;
+    text-align: center;
+}
+.attribution__link:link,
+.attribution__link:visited {
+    color: #96701d;
+    transition: color 50ms;
+}
+.attribution__link:hover {
+    color: #3e52a3;
+}
+.attribution__link:active {
+    color: #4597e4;
+}
+
+/* ---- Media Queries ---- */
+@media (max-width: 42em) {
+    .card {
+        grid-template: repeat(3, min-content) / 1fr;
+    }
+
+    .community {
+        grid-area: 1 / 1 / 2 / 2;
+    }
+    .community__main-title {
+        font-size: 2.2rem;
+    }
+    .community__sub-title {
+        font-size: 1.6rem;
+    }
+    .community__text {
+        font-size: 1.3rem;
+    }
+
+    .community,
+    .subscription,
+    .why-us {
+        padding: 1.6em;
+    }
+}
