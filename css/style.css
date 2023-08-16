@@ -59,7 +59,7 @@ h1 {
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
     display: grid;
     grid-template: min-content 1fr / 1fr 1fr;
-    max-width: 664px;
+    width: 664px;
     overflow: hidden;
 }
 
@@ -169,9 +169,17 @@ h1 {
 }
 
 /* ---- Media Queries ---- */
-@media (max-width: 42em) {
+@media (max-width: 48em) {
+    main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
     .card {
         grid-template: repeat(3, min-content) / 1fr;
+        width: 311px;
     }
 
     .community {
